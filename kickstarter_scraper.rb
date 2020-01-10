@@ -18,7 +18,7 @@ def create_project_hash
      }
 
    end
-   puts project
+   puts projects
    # return the projects hash
    projects
 end
