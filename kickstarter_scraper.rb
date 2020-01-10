@@ -10,7 +10,7 @@ def create_project_hash
   kickstarter.css(".clearfix list-simple, .project grid_4, h2").each do |e|
     title = e.css("a").text
     result[title] = {
-      :image_link => e.css("a").attribute("src").value,
+      :image_link => e.css("div.project-thumbnail a img").attribute("src").value,
       :description => e.css("p.bbcard_blurb").text,
       :location => e.css("ul.project-meta span.location-name").text,
       :percent_funded => e.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
