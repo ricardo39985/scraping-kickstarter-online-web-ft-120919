@@ -7,5 +7,5 @@ def create_project_hash
 
   kickstarter = Nokogiri::HTML(html)
   kickstartercss(".clearfix list-simple, li").each { |e|  puts e}
-  binding.pry
+  # binding.pry
 end
