@@ -6,6 +6,6 @@ def create_project_hash
   html = File.read('fixtures/kickstarter.html')
 
   kickstarter = Nokogiri::HTML(html)
-  kickstarter.css(".clearfix list-simple, .project grid_4").each { |e|  puts e.css("a").text}
+  kickstarter.css(".clearfix list-simple, .project grid_4, h2").each { |e|  puts e.css("a").text}
   # binding.pry
 end
